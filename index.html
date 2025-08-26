@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhireo — Deep Hiring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto'] },
+          colors: {
+            brand: {
+              primary: '#0C7FF2', // blue
+              ink: '#111827',     // near-black
+              slate: '#6B7280',   // slate
+              base: '#F3F4F6',    // light gray
+              accent: '#10B981'   // green
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Subtle atmospheric background for hero */
+    .hero-bg {
+      background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(12,127,242,0.18), transparent 70%),
+        radial-gradient(800px 400px at 90% 0%, rgba(16,185,129,0.12), transparent 60%);
+    }
+    .logo-shadow { filter: drop-shadow(0 6px 18px rgba(12,127,242,0.25)); }
+  </style>
+</head>
+<body class="antialiased text-brand-ink bg-white">
+  <!-- Header -->
+  <header class="relative z-10">
+    <div class="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
+      <a href="#" class="inline-flex items-center gap-3" aria-label="Dhireo Home">
+        <span class="logo-shadow">
+          <!-- Logo mark: D + sonar rings (depth + flow) -->
+          <svg class="h-9 w-9" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="6" width="8" height="24" rx="4" fill="#0C7FF2"/>
+            <path d="M14 8a10 10 0 1 1 0 20" stroke="#0C7FF2" stroke-width="4" stroke-linecap="round"/>
+            <path d="M14 12a6 6 0 1 1 0 12" stroke="#0C7FF2" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+            <path d="M14 16a2 2 0 1 1 0 4" stroke="#0C7FF2" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </span>
+        <div>
+          <div class="text-2xl font-extrabold tracking-tight">Dhireo</div>
+          <div class="text-xs uppercase tracking-[0.25em] text-brand-slate">Deep Hiring</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-brand-ink/80">
+        <a href="https://app.dhireo.com" class="hover:text-brand-ink" target="_blank" rel="noopener">Product</a>
+        <a href="#pricing" class="hover:text-brand-ink">Pricing</a>
+        <a href="https://doc.dhireo.com" target="_blank" rel="noopener">Docs</a>
+        <a href="#contact" class="hover:text-brand-ink" data-contact-open>Contact</a>
+        <a href="https://app.dhireo.com" class="inline-flex justify-center items-center rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition">Start free</a>
+      </nav>
+      <button class="md:hidden inline-flex items-center justify-center rounded-xl ring-1 ring-black/10 px-3 py-2" aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero-bg relative">
+    <div class="absolute inset-0 -z-10 bg-brand-base/60"></div>
+    <section class="mx-auto max-w-7xl px-6 pt-16 pb-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Copy -->
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white shadow-sm ring-1 ring-black/5 px-3 py-1 mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            <span class="text-xs font-medium text-brand-ink/70">Now live — ATS MVP</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+            Dhireo <span class="text-brand-primary">— Deep Hiring.</span>
+          </h1>
+          <p class="mt-6 text-lg text-brand-slate max-w-xl">
+            One workspace to source, screen, schedule, and hire—end to end. Get pipeline depth and feedback loops in a clean, fast flow.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="https://app.dhireo.com" class="inline-flex justify-center items-center rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition">Start free</a>
+            <a href="#demo" class="inline-flex justify-center items-center rounded-2xl ring-1 ring-brand-ink/10 bg-white text-brand-ink px-6 py-3.5 font-semibold hover:ring-brand-ink/20 transition" data-demo-open data-demo-url="https://www.youtube.com/embed/YOUR_2_MIN_DEMO_ID?autoplay=1&rel=0&modestbranding=1">See a quick demo</a>
+          </div>
+          <div class="mt-10 flex items-center gap-6">
+            <div class="text-sm text-brand-slate">Trusted by teams at</div>
+            <div class="flex items-center gap-6 opacity-70">
+              <div class="h-6 w-20 bg-brand-ink/5 rounded"></div>
+              <div class="h-6 w-20 bg-brand-ink/5 rounded"></div>
+              <div class="h-6 w-20 bg-brand-ink/5 rounded"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product mockup card -->
+        <div>
+          <div class="relative rounded-3xl bg-white ring-1 ring-black/5 shadow-xl p-6">
+            <div class="flex items-center justify-between pb-4 border-b border-black/5">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex h-2.5 w-2.5 rounded-full bg-brand-primary/80"></span>
+                <span class="text-sm font-semibold text-brand-ink">Candidate Pipeline</span>
+              </div>
+              <span class="text-xs text-brand-slate">Today</span>
+            </div>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-brand-base p-4">
+                <div class="text-xs text-brand-slate">Applied</div>
+                <div class="text-3xl font-bold">128</div>
+              </div>
+              <div class="rounded-2xl bg-brand-base p-4">
+                <div class="text-xs text-brand-slate">Screening</div>
+                <div class="text-3xl font-bold">76</div>
+              </div>
+              <div class="rounded-2xl bg-brand-base p-4">
+                <div class="text-xs text-brand-slate">Interviewing</div>
+                <div class="text-3xl font-bold">32</div>
+              </div>
+              <div class="rounded-2xl bg-brand-base p-4">
+                <div class="text-xs text-brand-slate">Offers</div>
+                <div class="text-3xl font-bold">10</div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-brand-base p-4">
+              <div class="text-xs text-brand-slate mb-2">Upcoming interviews</div>
+              <ul class="space-y-3">
+                <li class="flex justify-between text-sm">
+                  <span class="font-medium">Sr. Backend · A. Verma</span>
+                  <span class="text-brand-ink/70">11:30</span>
+                </li>
+                <li class="flex justify-between text-sm">
+                  <span class="font-medium">iOS Engineer · R. Iyer</span>
+                  <span class="text-brand-ink/70">13:00</span>
+                </li>
+                <li class="flex justify-between text-sm">
+                  <span class="font-medium">Data Analyst · P. Shah</span>
+                  <span class="text-brand-ink/70">16:15</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Decorative glow -->
+            <div class="pointer-events-none absolute -inset-x-8 -bottom-8 h-24 blur-2xl" style="background: radial-gradient(60% 100% at 50% 0%, rgba(12,127,242,.25), transparent 60%);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pricing -->
+  <section id="pricing" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="text-center mb-14">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white shadow-sm ring-1 ring-black/5 px-3 py-1 mb-4">
+        <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+        <span class="text-xs font-medium text-brand-ink/70">Simple, transparent pricing</span>
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Pricing that scales with your team</h2>
+      <p class="mt-3 text-brand-slate">Unlimited candidates, jobs, applications, and users on every plan.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <!-- Go Plan -->
+      <div class="relative overflow-hidden rounded-3xl bg-white ring-1 ring-black/5 shadow-xl">
+        <!-- Banner strip -->
+        <div class="bg-gradient-to-r from-brand-primary/10 via-brand-primary/5 to-transparent px-6 py-4 flex items-center justify-between">
+          <div class="text-lg font-bold">Go</div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-brand-primary">Free forever</span>
+        </div>
+        <div class="px-6 pt-4 pb-6">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-extrabold">$0</span>
+            <span class="text-sm text-brand-slate">/ year</span>
+          </div>
+          <p class="mt-2 text-sm text-brand-slate">Everything you need to run an ATS without limits.</p>
+
+          <ul class="mt-6 space-y-3 text-sm">
+            
+          </ul>
+
+          <a href="https://app.dhireo.com" class="inline-flex justify-center items-center rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition">Start free</a>
+        </div>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="relative overflow-hidden rounded-3xl bg-white ring-2 ring-brand-primary/30 shadow-2xl">
+        <!-- Banner strip -->
+        <div class="bg-gradient-to-r from-brand-primary via-brand-primary/80 to-brand-primary/60 px-6 py-4 flex items-center justify-between text-white">
+          <div class="text-lg font-bold">Pro</div>
+          <span class="text-xs font-semibold uppercase tracking-wider">Most popular</span>
+        </div>
+        <div class="px-6 pt-4 pb-6">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-extrabold">$69</span>
+            <span class="text-sm text-brand-slate">/ year</span>
+          </div>
+          <p class="mt-2 text-sm text-brand-slate">Everything in Go, plus collaboration and insights.</p>
+
+          <ul class="mt-6 space-y-3 text-sm">
+            
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Create Staff & Corporate HR organizations</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Interview management</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Candidate recruitment cycle</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Download options</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-none" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Reporting & dashboard</li>
+          </ul>
+
+          <!-- Add-on note -->
+          
+          </div>
+
+          <a href="https://app.dhireo.com?plan=pro" class="mt-8 inline-flex w-full justify-center items-center rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition">Upgrade to Pro</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- FAQ (under pricing) -->
+  <section id="faq" class="mx-auto max-w-7xl px-6 pb-8">
+    <div class="rounded-3xl bg-white ring-1 ring-black/5 shadow-sm p-6">
+      <h3 class="text-2xl font-bold">FAQs</h3>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <details class="rounded-xl bg-brand-base p-4">
+          <summary class="cursor-pointer font-medium">Is it really unlimited?</summary>
+          <p class="mt-2 text-sm text-brand-slate">Yes — candidates, job postings, applications, and users are unlimited on both plans. Reasonable fair‑use applies to automation and API usage.</p>
+        </details>
+        <details class="rounded-xl bg-brand-base p-4">
+          <summary class="cursor-pointer font-medium">Can we invite the whole team?</summary>
+          <p class="mt-2 text-sm text-brand-slate">Absolutely. Add hiring managers, recruiters, and interviewers — there are no seat caps.</p>
+        </details>
+        <details class="rounded-xl bg-brand-base p-4">
+          <summary class="cursor-pointer font-medium">What does Pro include?</summary>
+          <p class="mt-2 text-sm text-brand-slate">Everything in Go, plus organizations (Staff & Corporate HR), interview management, recruitment cycle, downloads, reporting & dashboards.</p>
+        </details>
+        <details class="rounded-xl bg-brand-base p-4">
+          <summary class="cursor-pointer font-medium">Can we export our data?</summary>
+          <p class="mt-2 text-sm text-brand-slate">Yes — CSV downloads and reports are available on Pro. MVP includes standard exports.</p>
+        </details>
+        <details class="rounded-xl bg-brand-base p-4 md:col-span-2">
+          <summary class="cursor-pointer font-medium">Refunds & cancellations</summary>
+          <p class="mt-2 text-sm text-brand-slate">Pro is billed annually. You can cancel anytime to stop auto‑renewal; access continues until the end of your current term. We don’t offer partial refunds for the remaining period.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <!-- Contact (anchor fallback) -->
+  <section id="contact" class="mx-auto max-w-7xl px-6 pb-16">
+    <div class="grid lg:grid-cols-5 gap-8 items-stretch">
+      <div class="lg:col-span-3 rounded-3xl bg-white ring-1 ring-black/5 shadow-xl p-6">
+        <h3 class="text-2xl font-bold">Contact us</h3>
+        <p class="mt-1 text-sm text-brand-slate">Prefer email? Write to <a href="mailto:team@dhireo.com" class="underline hover:no-underline">team@dhireo.com</a>.</p>
+        <button class="mt-4 inline-flex items-center rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition" data-contact-open>Open contact form</button>
+      </div>
+      <div class="lg:col-span-2 rounded-3xl bg-brand-base p-6">
+        <h4 class="font-semibold">We usually reply within 1 business day</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-primary"></span> Product & pricing questions</li>
+          <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-primary"></span> Partnership & enterprise</li>
+          <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-primary"></span> Support & feedback</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="absolute inset-0 bg-black/40" data-modal-close></div>
+    <div class="relative mx-auto my-10 w-[92%] max-w-lg rounded-3xl bg-white ring-1 ring-black/10 shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-black/5">
+        <h3 id="contact-modal-title" class="text-lg font-bold">Contact Dhireo</h3>
+        <button class="rounded-xl ring-1 ring-black/10 px-2 py-1 text-sm" data-modal-close>Esc</button>
+      </div>
+      <div class="p-6">
+        <p class="text-sm text-brand-slate">Fill this form or email us at <a href="mailto:team@dhireo.com" class="underline hover:no-underline">team@dhireo.com</a>.</p>
+        <form class="mt-4 space-y-4" onsubmit="event.preventDefault(); alert('Message sent! (demo)'); document.getElementById('contact-modal').classList.add('hidden');">
+          <label class="block text-sm font-medium">Your email
+            <input type="email" required class="mt-1 block w-full rounded-xl ring-1 ring-black/10 px-3 py-2" placeholder="you@company.com" />
+          </label>
+          <label class="block text-sm font-medium">Subject
+            <input type="text" required class="mt-1 block w-full rounded-xl ring-1 ring-black/10 px-3 py-2" placeholder="How can we help?" />
+          </label>
+          <label class="block text-sm font-medium">Message
+            <textarea required rows="5" class="mt-1 block w-full rounded-xl ring-1 ring-black/10 px-3 py-2" placeholder="Tell us a bit about your question…"></textarea>
+          </label>
+          <div class="flex gap-3">
+            <button type="submit" class="flex-1 rounded-2xl bg-brand-primary text-white px-6 py-3.5 font-semibold shadow-md hover:shadow-lg transition">Send message</button>
+            <button type="button" class="rounded-2xl ring-1 ring-black/10 px-6 py-3.5 font-semibold" data-modal-close>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Contact modal controller
+    (function(){
+      const cModal = document.getElementById('contact-modal');
+      if(!cModal) return;
+      const openers = document.querySelectorAll('[data-contact-open]');
+      const closers = cModal.querySelectorAll('[data-modal-close]');
+      function open(){ cModal.classList.remove('hidden'); setTimeout(()=>{ const first=cModal.querySelector('input[type=email]'); if(first) first.focus(); }, 10); }
+      function close(){ cModal.classList.add('hidden'); }
+      openers.forEach(btn=> btn.addEventListener('click', (e)=>{ e.preventDefault(); open(); }));
+      closers.forEach(btn=> btn.addEventListener('click', close));
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+    })();
+  </script>
+
+  <!-- Demo Modal -->
+  <div id="demo-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+    <div class="absolute inset-0 bg-black/40" data-modal-close></div>
+    <div class="relative mx-auto my-10 w-[92%] max-w-3xl rounded-3xl bg-white ring-1 ring-black/10 shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-black/5">
+        <h3 id="demo-modal-title" class="text-lg font-bold">2‑minute product demo</h3>
+        <button class="rounded-xl ring-1 ring-black/10 px-2 py-1 text-sm" data-modal-close>Esc</button>
+      </div>
+      <div class="p-4">
+        <div class="aspect-video w-full rounded-2xl overflow-hidden ring-1 ring-black/5">
+          <iframe id="demo-iframe" src="" title="Dhireo — 2 minute demo" class="w-full h-full" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Demo modal controller
+    (function(){
+      const dModal = document.getElementById('demo-modal');
+      const iframe = dModal ? dModal.querySelector('#demo-iframe') : null;
+      function open(url){ if(!dModal) return; dModal.classList.remove('hidden'); if(iframe) iframe.src = url || 'https://www.youtube.com/embed/YOUR_2_MIN_DEMO_ID?autoplay=1&rel=0&modestbranding=1'; }
+      function close(){ if(!dModal) return; dModal.classList.add('hidden'); if(iframe) iframe.src=''; }
+      document.querySelectorAll('[data-demo-open]').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{ e.preventDefault(); open(btn.getAttribute('data-demo-url')); });
+      });
+      if(dModal){
+        dModal.querySelectorAll('[data-modal-close]').forEach(b=> b.addEventListener('click', close));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+      }
+    })();
+  </script>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/5">
+    <div class="mx-auto max-w-7xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <svg class="h-6 w-6" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="6" width="8" height="24" rx="4" fill="#0C7FF2"/>
+          <path d="M14 8a10 10 0 1 1 0 20" stroke="#0C7FF2" stroke-width="4" stroke-linecap="round"/>
+          <path d="M14 12a6 6 0 1 1 0 12" stroke="#0C7FF2" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          <path d="M14 16a2 2 0 1 1 0 4" stroke="#0C7FF2" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+        </svg>
+        <span class="font-semibold">Dhireo</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-slate">Deep Hiring</span>
+      </div>
+      <div class="text-sm text-brand-slate">© 2025 Dhireo. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
